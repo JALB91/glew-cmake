@@ -37,6 +37,10 @@ if(MSVC)
 	list(APPEND LIBGLEW_SRCS ${RC_DIR}/glew.rc)
 endif()
 
+if(POLICY CMP0072)
+	set(OpenGL_GL_PREFERENCE LEGACY)
+endif()
+
 find_package(OpenGL REQUIRED)
 
 if(NOT USE_GLU)

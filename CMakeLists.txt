@@ -1,9 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
-
-if(POLICY CMP0048)
-	cmake_policy(SET CMP0048 NEW)
-endif(POLICY CMP0048)
-
+cmake_minimum_required(VERSION 2.8.12)
 project("glew")
 
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)

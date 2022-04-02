@@ -12,7 +12,8 @@ You can see some CMake script examples in [`glew-cmake`](./glew-cmake/) director
 
 ## Usage
 
-This project provide `libglew_static` and `libglew_shared` library targets and `glewinfo` and `visualinfo` executable targets.
+[![Gitter](https://badges.gitter.im/nigels-com/glew.svg)](https://gitter.im/nigels-com/glew?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Download](https://img.shields.io/sourceforge/dm/glew.svg)](https://sourceforge.net/projects/glew/files/latest/download)
 
 `libglew_static` provides a static library, and `libglew_shared` provides a shared library.
 *glew-cmake* does not affected by [BUILD_SHARED_LIBS](https://cmake.org/cmake/help/latest/variable/BUILD_SHARED_LIBS.html).

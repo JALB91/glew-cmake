@@ -3874,6 +3874,17 @@ static void _glewInfo_GL_ARM_rgba8 (void)
 
 #endif /* GL_ARM_rgba8 */
 
+#ifdef GL_ARM_shader_core_properties
+
+static void _glewInfo_GL_ARM_shader_core_properties (void)
+{
+  GLboolean fi = glewPrintExt("GL_ARM_shader_core_properties", GLEW_ARM_shader_core_properties, glewIsSupported("GL_ARM_shader_core_properties"), glewGetExtension("GL_ARM_shader_core_properties"));
+
+  glewInfoFunc(fi, "glMaxActiveShaderCoresARM", glMaxActiveShaderCoresARM == NULL);
+}
+
+#endif /* GL_ARM_shader_core_properties */
+
 #ifdef GL_ARM_shader_framebuffer_fetch
 
 static void _glewInfo_GL_ARM_shader_framebuffer_fetch (void)
@@ -10369,6 +10380,15 @@ static void _glewInfo_GL_QCOM_perfmon_global_mode (void)
 
 #endif /* GL_QCOM_perfmon_global_mode */
 
+#ifdef GL_QCOM_render_sRGB_R8_RG8
+
+static void _glewInfo_GL_QCOM_render_sRGB_R8_RG8 (void)
+{
+  glewPrintExt("GL_QCOM_render_sRGB_R8_RG8", GLEW_QCOM_render_sRGB_R8_RG8, glewIsSupported("GL_QCOM_render_sRGB_R8_RG8"), glewGetExtension("GL_QCOM_render_sRGB_R8_RG8"));
+}
+
+#endif /* GL_QCOM_render_sRGB_R8_RG8 */
+
 #ifdef GL_QCOM_render_shared_exponent
 
 static void _glewInfo_GL_QCOM_render_shared_exponent (void)
@@ -10438,6 +10458,15 @@ static void _glewInfo_GL_QCOM_texture_foveated_subsampled_layout (void)
 
 #endif /* GL_QCOM_texture_foveated_subsampled_layout */
 
+#ifdef GL_QCOM_texture_lod_bias
+
+static void _glewInfo_GL_QCOM_texture_lod_bias (void)
+{
+  glewPrintExt("GL_QCOM_texture_lod_bias", GLEW_QCOM_texture_lod_bias, glewIsSupported("GL_QCOM_texture_lod_bias"), glewGetExtension("GL_QCOM_texture_lod_bias"));
+}
+
+#endif /* GL_QCOM_texture_lod_bias */
+
 #ifdef GL_QCOM_tiled_rendering
 
 static void _glewInfo_GL_QCOM_tiled_rendering (void)
@@ -10458,6 +10487,15 @@ static void _glewInfo_GL_QCOM_writeonly_rendering (void)
 }
 
 #endif /* GL_QCOM_writeonly_rendering */
+
+#ifdef GL_QCOM_ycbcr_degamma
+
+static void _glewInfo_GL_QCOM_ycbcr_degamma (void)
+{
+  glewPrintExt("GL_QCOM_ycbcr_degamma", GLEW_QCOM_ycbcr_degamma, glewIsSupported("GL_QCOM_ycbcr_degamma"), glewGetExtension("GL_QCOM_ycbcr_degamma"));
+}
+
+#endif /* GL_QCOM_ycbcr_degamma */
 
 #ifdef GL_REGAL_ES1_0_compatibility
 
@@ -12073,6 +12111,15 @@ static void _glewInfo_EGL_ANDROID_recordable (void)
 
 #endif /* EGL_ANDROID_recordable */
 
+#ifdef EGL_ANDROID_telemetry_hint
+
+static void _glewInfo_EGL_ANDROID_telemetry_hint (void)
+{
+  glewPrintExt("EGL_ANDROID_telemetry_hint", EGLEW_ANDROID_telemetry_hint, eglewIsSupported("EGL_ANDROID_telemetry_hint"), eglewGetExtension("EGL_ANDROID_telemetry_hint"));
+}
+
+#endif /* EGL_ANDROID_telemetry_hint */
+
 #ifdef EGL_ANGLE_d3d_share_handle_client_buffer
 
 static void _glewInfo_EGL_ANGLE_d3d_share_handle_client_buffer (void)
@@ -12310,6 +12357,17 @@ static void _glewInfo_EGL_EXT_device_query_name (void)
 }
 
 #endif /* EGL_EXT_device_query_name */
+
+#ifdef EGL_EXT_display_alloc
+
+static void _glewInfo_EGL_EXT_display_alloc (void)
+{
+  GLboolean fi = glewPrintExt("EGL_EXT_display_alloc", EGLEW_EXT_display_alloc, eglewIsSupported("EGL_EXT_display_alloc"), eglewGetExtension("EGL_EXT_display_alloc"));
+
+  glewInfoFunc(fi, "eglDestroyDisplayEXT", eglDestroyDisplayEXT == NULL);
+}
+
+#endif /* EGL_EXT_display_alloc */
 
 #ifdef EGL_EXT_explicit_device
 
@@ -12560,6 +12618,15 @@ static void _glewInfo_EGL_EXT_protected_surface (void)
 }
 
 #endif /* EGL_EXT_protected_surface */
+
+#ifdef EGL_EXT_query_reset_notification_strategy
+
+static void _glewInfo_EGL_EXT_query_reset_notification_strategy (void)
+{
+  glewPrintExt("EGL_EXT_query_reset_notification_strategy", EGLEW_EXT_query_reset_notification_strategy, eglewIsSupported("EGL_EXT_query_reset_notification_strategy"), eglewGetExtension("EGL_EXT_query_reset_notification_strategy"));
+}
+
+#endif /* EGL_EXT_query_reset_notification_strategy */
 
 #ifdef EGL_EXT_stream_consumer_egloutput
 
@@ -15920,6 +15987,9 @@ static void glewInfo (void)
 #ifdef GL_ARM_rgba8
   _glewInfo_GL_ARM_rgba8();
 #endif /* GL_ARM_rgba8 */
+#ifdef GL_ARM_shader_core_properties
+  _glewInfo_GL_ARM_shader_core_properties();
+#endif /* GL_ARM_shader_core_properties */
 #ifdef GL_ARM_shader_framebuffer_fetch
   _glewInfo_GL_ARM_shader_framebuffer_fetch();
 #endif /* GL_ARM_shader_framebuffer_fetch */
@@ -17534,6 +17604,9 @@ static void glewInfo (void)
 #ifdef GL_QCOM_perfmon_global_mode
   _glewInfo_GL_QCOM_perfmon_global_mode();
 #endif /* GL_QCOM_perfmon_global_mode */
+#ifdef GL_QCOM_render_sRGB_R8_RG8
+  _glewInfo_GL_QCOM_render_sRGB_R8_RG8();
+#endif /* GL_QCOM_render_sRGB_R8_RG8 */
 #ifdef GL_QCOM_render_shared_exponent
   _glewInfo_GL_QCOM_render_shared_exponent();
 #endif /* GL_QCOM_render_shared_exponent */
@@ -17555,12 +17628,18 @@ static void glewInfo (void)
 #ifdef GL_QCOM_texture_foveated_subsampled_layout
   _glewInfo_GL_QCOM_texture_foveated_subsampled_layout();
 #endif /* GL_QCOM_texture_foveated_subsampled_layout */
+#ifdef GL_QCOM_texture_lod_bias
+  _glewInfo_GL_QCOM_texture_lod_bias();
+#endif /* GL_QCOM_texture_lod_bias */
 #ifdef GL_QCOM_tiled_rendering
   _glewInfo_GL_QCOM_tiled_rendering();
 #endif /* GL_QCOM_tiled_rendering */
 #ifdef GL_QCOM_writeonly_rendering
   _glewInfo_GL_QCOM_writeonly_rendering();
 #endif /* GL_QCOM_writeonly_rendering */
+#ifdef GL_QCOM_ycbcr_degamma
+  _glewInfo_GL_QCOM_ycbcr_degamma();
+#endif /* GL_QCOM_ycbcr_degamma */
 #ifdef GL_REGAL_ES1_0_compatibility
   _glewInfo_GL_REGAL_ES1_0_compatibility();
 #endif /* GL_REGAL_ES1_0_compatibility */
@@ -18412,6 +18491,9 @@ static void eglewInfo ()
 #ifdef EGL_ANDROID_recordable
   _glewInfo_EGL_ANDROID_recordable();
 #endif /* EGL_ANDROID_recordable */
+#ifdef EGL_ANDROID_telemetry_hint
+  _glewInfo_EGL_ANDROID_telemetry_hint();
+#endif /* EGL_ANDROID_telemetry_hint */
 #ifdef EGL_ANGLE_d3d_share_handle_client_buffer
   _glewInfo_EGL_ANGLE_d3d_share_handle_client_buffer();
 #endif /* EGL_ANGLE_d3d_share_handle_client_buffer */
@@ -18484,6 +18566,9 @@ static void eglewInfo ()
 #ifdef EGL_EXT_device_query_name
   _glewInfo_EGL_EXT_device_query_name();
 #endif /* EGL_EXT_device_query_name */
+#ifdef EGL_EXT_display_alloc
+  _glewInfo_EGL_EXT_display_alloc();
+#endif /* EGL_EXT_display_alloc */
 #ifdef EGL_EXT_explicit_device
   _glewInfo_EGL_EXT_explicit_device();
 #endif /* EGL_EXT_explicit_device */
@@ -18562,6 +18647,9 @@ static void eglewInfo ()
 #ifdef EGL_EXT_protected_surface
   _glewInfo_EGL_EXT_protected_surface();
 #endif /* EGL_EXT_protected_surface */
+#ifdef EGL_EXT_query_reset_notification_strategy
+  _glewInfo_EGL_EXT_query_reset_notification_strategy();
+#endif /* EGL_EXT_query_reset_notification_strategy */
 #ifdef EGL_EXT_stream_consumer_egloutput
   _glewInfo_EGL_EXT_stream_consumer_egloutput();
 #endif /* EGL_EXT_stream_consumer_egloutput */

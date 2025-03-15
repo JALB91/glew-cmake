@@ -648,6 +648,17 @@ typedef EGLBoolean ( * PFNEGLPRESENTATIONTIMEANDROIDPROC) (EGLDisplay dpy, EGLSu
 
 #endif /* EGL_ANDROID_recordable */
 
+/* ----------------------- EGL_ANDROID_telemetry_hint ---------------------- */
+
+#ifndef EGL_ANDROID_telemetry_hint
+#define EGL_ANDROID_telemetry_hint 1
+
+#define EGL_TELEMETRY_HINT_ANDROID 0x3570
+
+#define EGLEW_ANDROID_telemetry_hint EGLEW_GET_VAR(__EGLEW_ANDROID_telemetry_hint)
+
+#endif /* EGL_ANDROID_telemetry_hint */
+
 /* ---------------- EGL_ANGLE_d3d_share_handle_client_buffer --------------- */
 
 #ifndef EGL_ANGLE_d3d_share_handle_client_buffer
@@ -962,6 +973,21 @@ typedef EGLBoolean ( * PFNEGLQUERYDISPLAYATTRIBEXTPROC) (EGLDisplay dpy, EGLint 
 #define EGLEW_EXT_device_query_name EGLEW_GET_VAR(__EGLEW_EXT_device_query_name)
 
 #endif /* EGL_EXT_device_query_name */
+
+/* ------------------------- EGL_EXT_display_alloc ------------------------- */
+
+#ifndef EGL_EXT_display_alloc
+#define EGL_EXT_display_alloc 1
+
+#define EGL_ALLOC_NEW_DISPLAY_EXT 0x3379
+
+typedef EGLBoolean ( * PFNEGLDESTROYDISPLAYEXTPROC) (EGLDisplay dpy);
+
+#define eglDestroyDisplayEXT EGLEW_GET_FUN(__eglewDestroyDisplayEXT)
+
+#define EGLEW_EXT_display_alloc EGLEW_GET_VAR(__EGLEW_EXT_display_alloc)
+
+#endif /* EGL_EXT_display_alloc */
 
 /* ------------------------ EGL_EXT_explicit_device ------------------------ */
 
@@ -1321,6 +1347,15 @@ typedef EGLDisplay ( * PFNEGLGETPLATFORMDISPLAYEXTPROC) (EGLenum platform, void*
 #define EGLEW_EXT_protected_surface EGLEW_GET_VAR(__EGLEW_EXT_protected_surface)
 
 #endif /* EGL_EXT_protected_surface */
+
+/* --------------- EGL_EXT_query_reset_notification_strategy --------------- */
+
+#ifndef EGL_EXT_query_reset_notification_strategy
+#define EGL_EXT_query_reset_notification_strategy 1
+
+#define EGLEW_EXT_query_reset_notification_strategy EGLEW_GET_VAR(__EGLEW_EXT_query_reset_notification_strategy)
+
+#endif /* EGL_EXT_query_reset_notification_strategy */
 
 /* ------------------- EGL_EXT_stream_consumer_egloutput ------------------- */
 
@@ -2964,6 +2999,8 @@ EGLEW_FUN_EXPORT PFNEGLQUERYDEVICEATTRIBEXTPROC __eglewQueryDeviceAttribEXT;
 EGLEW_FUN_EXPORT PFNEGLQUERYDEVICESTRINGEXTPROC __eglewQueryDeviceStringEXT;
 EGLEW_FUN_EXPORT PFNEGLQUERYDISPLAYATTRIBEXTPROC __eglewQueryDisplayAttribEXT;
 
+EGLEW_FUN_EXPORT PFNEGLDESTROYDISPLAYEXTPROC __eglewDestroyDisplayEXT;
+
 EGLEW_FUN_EXPORT PFNEGLQUERYDMABUFFORMATSEXTPROC __eglewQueryDmaBufFormatsEXT;
 EGLEW_FUN_EXPORT PFNEGLQUERYDMABUFMODIFIERSEXTPROC __eglewQueryDmaBufModifiersEXT;
 
@@ -3109,6 +3146,7 @@ EGLEW_VAR_EXPORT GLboolean __EGLEW_ANDROID_image_native_buffer;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANDROID_native_fence_sync;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANDROID_presentation_time;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANDROID_recordable;
+EGLEW_VAR_EXPORT GLboolean __EGLEW_ANDROID_telemetry_hint;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANGLE_d3d_share_handle_client_buffer;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANGLE_device_d3d;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_ANGLE_query_surface_pointer;
@@ -3133,6 +3171,7 @@ EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_device_openwf;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_device_persistent_id;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_device_query;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_device_query_name;
+EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_display_alloc;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_explicit_device;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_gl_colorspace_bt2020_hlg;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_gl_colorspace_bt2020_linear;
@@ -3159,6 +3198,7 @@ EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_platform_xcb;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_present_opaque;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_protected_content;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_protected_surface;
+EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_query_reset_notification_strategy;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_stream_consumer_egloutput;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_surface_CTA861_3_metadata;
 EGLEW_VAR_EXPORT GLboolean __EGLEW_EXT_surface_SMPTE2086_metadata;
